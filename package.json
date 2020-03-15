@@ -1,0 +1,42 @@
+{
+  "name": "sequelize-init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "nodemon --exec 'npm run lint && node' bin/www -q",
+    "lint": "eslint src/",
+    "test": "jest --ci --detectOpenHandles --forceExit",
+    "db:create": "sequelize db:create --config ./config/database.js --env $NODE_ENV",
+    "db:drop": "sequelize db:drop --config ./config/database.js --env $NODE_ENV",
+    "db:migrate": "sequelize db:migrate --config ./config/database.js --env $NODE_ENV",
+    "db:seed": "sequelize db:seed --config ./config/database.js --env $NODE_ENV"
+  },
+  "keywords": [],
+  "bin": {
+    "server": "node bin/www"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fastest-validator": "^1.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.18.2",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.5",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "faker": "^4.1.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "superagent": "^5.2.2",
+    "supertest": "^4.0.2"
+  }
+}

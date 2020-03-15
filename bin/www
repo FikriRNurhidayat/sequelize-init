@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+const app = require('../src/index.js')
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+  console.log('Starting sequelize-init service')
+  console.log('Environment  :', process.env.NODE_ENV || 'development');
+  console.log('Started at   :', Date());
+  console.log('Port         :', port);
+  console.log();
+})
