@@ -35,3 +35,13 @@ NODE_ENV=production npm run db:create
 NODE_ENV=production npm run db:migrate
 npm start
 ```
+
+## How to run with docker
+It is simple, but you need to install this following application first:
+* ```docker.io```
+* ```docker-compose```
+And also you need to setup the docker-compose.yml as well,
+Set it up accordingly.
+
+Then just simply run:
+```bash ./scripts/run.sh```

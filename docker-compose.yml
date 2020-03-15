@@ -1,0 +1,12 @@
+version: '3'
+services:
+  sequelize-init:
+    container_name: 'api-sequelize-init'
+    image: sequelize-init:latest
+    network_mode: "host"
+    environment:
+      - NODE_ENV=production
+      - DB_USERNAME=mentor
+      - DB_PASSWORD=123456
+      - JWT_SIGNATURE_KEY=2a10xgYRoNX6vp4A8lFj./wACuTa/kLf0BL2n8FbOgEpmwB9q1RGK7e6K
+      - PORT=3000
